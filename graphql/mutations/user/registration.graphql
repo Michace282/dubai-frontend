@@ -1,0 +1,24 @@
+mutation registration($email: String!, $firstName: String!, $lastName: String!, $password: String!, $passwordRepeat: String!, $guestUuid: UUID) {
+    registration(
+        input: {
+            email: $email
+            firstName: $firstName
+            lastName: $lastName
+            password: $password
+            passwordRepeat: $passwordRepeat
+            guestUuid: $guestUuid
+        }
+    ) {
+        errors {
+            field
+            messages
+        }
+        user {
+            id
+            username
+            firstName
+            lastName
+            email
+        }
+    }
+}
