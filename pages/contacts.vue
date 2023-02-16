@@ -10,17 +10,23 @@
                 <div class="contact-group">
                     <div class="label">Telephone</div>
                     <div class="value">
-                        <a href="tel:+971506553479">+971 50 655 3470</a>
-                        <a href="tel:+971585967208">+971 58 596 7208</a>
+                        <a href="tel:+971585794606">+971 58 579 4606</a>
+                        <!-- <a href="tel:+971585967208">+971 58 596 7208</a> -->
+                    </div>
+                </div>
+                <div class="contact-group">
+                    <div class="label">Retail shop</div>
+                    <div class="value">
+                        <p>Al Qouz 1, 6A street, “Palais De Danse” Dance studio, Dubai, UAE</p>
+                        <p>Ontario Tower Level P1 unit 2, Business Bay, “Heart of Dance” Dance studio, Dubai, UAE</p>
                     </div>
                 </div>
                 <div class="contact-group">
                     <div class="label">Registered office</div>
                     <div class="value">
-                        <!-- UAE, Dubai, Business Bay, Binary Tower, 20th floor -->
-                        Al Qouz 1, 6A steeet, “Palais De Danse” Dance Studio, Dubai, UAE
+                        Um Hurair Second, Wafi Residence, Dubai, UAE
                         <div class="d-flex align-items-center mt-30">
-                            <a href="https://wa.me/971585967208" target="_blank" class="mr-3"><img
+                            <a href="https://wa.me/971585794606" target="_blank" class="mr-3"><img
                                 src="~/assets/images/icons/whatsApp-gold.svg" alt="whatsapp icon"/></a>
                             <a href="https://www.instagram.com/dcs_dancewear/" target="_blank" class="ml-1"><img
                                 src="~/assets/images/icons/instagram-gold.svg" alt="instagram icon"/></a>
@@ -183,6 +189,7 @@
                 color: @black;
 
                 @media @small {
+                    width: auto;
                     text-align: left;
                 }
             }

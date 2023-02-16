@@ -46,7 +46,7 @@
 
         </div>
         <div class="row categories-pc" v-else>
-            <div class="col-12 col-md-2">
+            <div class="col-12 col-md-3">
                 <nuxt-link
                     :to="{ path: '/catalog/ladies',  }"
                     class="category category-img-ladies"
@@ -56,7 +56,7 @@
                     <div class="sub-name">WOMEN</div>
                 </nuxt-link>
             </div>
-            <div class="col-12 col-md-2">
+            <div class="col-12 col-md-3">
                 <nuxt-link
                     :to="{ path: '/catalog/dance_shoes',  }"
                     class="category category-img-danceshoes"
@@ -66,7 +66,7 @@
                     <div class="sub-name">DANCE SHOES</div>
                 </nuxt-link>
             </div>
-            <div class="col-12 col-md-2">
+            <div class="col-12 col-md-3">
                 <nuxt-link
                     :to="{ path: '/catalog/accessories',  }"
                     class="category category-img-acessories"
@@ -76,19 +76,19 @@
                     <div class="sub-name">ACCESSORIES</div>
                 </nuxt-link>
             </div>
-            <div class="col-12 col-md-2">
+            <div class="col-12 col-md-3">
                 <nuxt-link :to="{ path: '/catalog/mens',  }" class="category category-img-mens">
                     <img src='../assets/images/category-mans-pc.png' alt="Men’s dance clothes" class="my-index-category-img">
                     <div class="name">MEN</div>
                     <div class="sub-name">MEN</div>
                 </nuxt-link>
             </div>
-            <div class="col-12 col-md-2">
+            <!-- <div class="col-12 col-md-2">
                 <nuxt-link :to="{ path: '/catalog/performance_costumes',  }" class="category category-performance-costumes">
                     <div class="name">Competetion Consumes</div>
                     <div class="sub-name">Competetion Consumes</div>
                 </nuxt-link>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>

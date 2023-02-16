@@ -36,14 +36,14 @@
                 </div>
                 <div class="col-auto order-2 order-md-2">
                     <ul class="menu contacts">
-                        <li>
+                        <!-- <li>
                             <a href="tel:+971585967208">+971 58 596 7208</a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="tel:+971506553470">+971 50 655 3470</a>
+                            <a href="tel:+971585794606">+971 58 579 4606</a>
                         </li>
                         <li class="text-right">
-                            <a href="https://wa.me/971585967208" target="_blank" class="mr-2"><img
+                            <a href="https://wa.me/971585794606" target="_blank" class="mr-2"><img
                                 src="~/assets/images/icons/whatsApp.svg" alt="whatsapp icon" /></a>
                             <a href="https://www.instagram.com/dcs_dancewear/" target="_blank"><img
                                 src="~/assets/images/icons/instagram.svg" alt="instagram icon" /></a>

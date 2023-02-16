@@ -355,9 +355,9 @@
                         label: 'Performance costumes',
                         filterName: 'performanceCostumesType',
                         meta: {
-                            title: 'Performance costumes in Dubai.',
-                            description: 'In our DCS dancewear shop we are happy to offer you men\'s and women\'s dance shoes for Salsa, Bachata, Latin, Argentine tango and Ballroom dances.',
-                            keywords: "Performance costumes in Dubai",
+                            title: 'Dance costumes and competition dresses for Latin, Ballroom and Salsa in Dubai.',
+                            description: 'Our website collected a wide collection of Latin and Ballroom competition dance outfits, beautiful attires for male and female for sale and renting.',
+                            keywords: "Competition dance costumes Dubai. Ballroom and Latin dance dresses Dubai.",
                             h1: "PERFORMANCE CONSUMES"
                         },
                         subCategories: [
