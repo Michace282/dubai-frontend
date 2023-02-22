@@ -1,28 +1,47 @@
 <template>
     <div class="container">
-        <base-title :title="h1" class="mt-15"/>
+        <!-- <base-title :title="h1" class="mt-15"/>
         <template class="desc">
-    <div class="container">
-        <ApolloQuery
-            :query="require('~/graphql/queries/product/productType.graphql')"
-            :variables="{
-                productType: h1.charAt(0).toUpperCase() + h1.slice(1).toLowerCase(),
-            }"
-        >
-            <template v-slot="{ result: { error, data }, isLoading }">
-                <div v-if="isLoading || error" class="loading apollo mt-85"><loader /></div>
-                <div v-else-if="data && data.productTypeDetail" class="result apollo">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="text-box" v-html="data.productTypeDetail.description"></div>
+            <div class="container">
+                <ApolloQuery
+                    :query="require('~/graphql/queries/product/productType.graphql')"
+                    :variables="{
+                        productType: h1.charAt(0).toUpperCase() + h1.slice(1).toLowerCase(),
+                    }"
+                >
+                    <template v-slot="{ result: { error, data }, isLoading }">
+                        <div v-if="isLoading || error" class="loading apollo mt-85"><loader /></div>
+                        <div v-else-if="data && data.productTypeDetail" class="result apollo">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-box" v-html="data.productTypeDetail.description"></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </template>
-        </ApolloQuery>
-    </div>
-</template>
+                    </template>
+                </ApolloQuery>
+            </div>
+        </template> -->
 
+        <div class="desc">
+            <div class="flex-title"><base-title :title="h1" class="mt-25" :catalog='true' /></div>
+            <ApolloQuery
+                :query="require('~/graphql/queries/product/productType.graphql')"
+                :variables="{
+                    productType: productType.charAt(0).toUpperCase() + productType.slice(1).toLowerCase().replace('_',' '),
+                    // productType: h1.charAt(0).toUpperCase() + h1.slice(1).toLowerCase(),
+                }"
+            >
+                <template v-slot="{ result: { error, data }, isLoading }">
+                    <div v-if="isLoading || error" class="loading apollo mt-85"><loader /></div>
+                    <div v-else-if="data && data.productTypeDetail" class="result apollo">
+                        <div v-if="!isReadMore" class="text-box text-box-short" v-html="data.productTypeDetail.description"></div>
+                        <div v-else class="text-box" v-html="data.productTypeDetail.description"></div>
+                        <a href="#" @click="isReadMore = !isReadMore">{{isReadMore ? 'read less' : 'read more'}}...</a>
+                    </div>
+                </template>
+            </ApolloQuery>
+        </div>
         <div class="row mt-45">
             <div class="col-12 col-lg-3 filter-group" :class="{ active: showFilter }">
                 <filter-catalog
@@ -174,7 +193,9 @@
                 h1: '',
                 title: '',
                 description: '',
-                keywords: ''
+                keywords: '',
+                productType: '',
+                isReadMore: false,
             };
         },
         head() {
@@ -197,6 +218,17 @@
         methods: {
             changeFilter(f) {
                 this.cursor = null;
+                if (f.ladiesType) {
+                    this.productType = f.ladiesType;
+                } else if (f.mensType) {
+                    this.productType = f.mensType;
+                } else if (f.accessoriesType) {
+                    this.productType = f.accessoriesType;
+                } else if (f.danceShoesType) {
+                    this.productType = f.danceShoesType;
+                } else {
+                    this.productType = f.productType ? f.productType : '';
+                }
                 this.filter = f;
                 this.loading = true;
             },
@@ -291,6 +323,24 @@ row.mt-45 {
 }
 </style>
 <style lang="less">
+.desc {
+        display: flex;
+        align-items: flex-start;
+        @media @medium {
+            flex-direction: column;
+        }
+        .flex-title {
+            min-width: 40%;
+            margin-right: 10px;
+        }
+        .text-box {
+            padding-top: 7px;
+        }
+        .text-box-short {
+            height: 50px;
+            overflow: hidden;
+        }
+    }
     .filter-group {
         @media @large {
             position: fixed;

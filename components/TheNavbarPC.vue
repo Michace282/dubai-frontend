@@ -40,6 +40,11 @@
                                 <b-nav-item to="/catalog/mens">Men’s dancewear</b-nav-item>
                                 <b-nav-item to="/catalog/accessories">Dance Accessories</b-nav-item>
                                 <b-nav-item to="/catalog/dance_shoes">Dance shoes</b-nav-item>
+                                <!-- <b-nav-item to="/catalog/ladies">Women</b-nav-item>
+                                <b-nav-item to="/catalog/mens">Men</b-nav-item>
+                                <b-nav-item to="/catalog/accessories">Accessories</b-nav-item>
+                                <b-nav-item to="/catalog/dance_shoes">Shoes</b-nav-item>
+                                <b-nav-item to="/catalog/performance_costumes">Costumes</b-nav-item> -->
                                 <b-nav-item to="/about-us/">About us</b-nav-item>
                                 <b-nav-item to="/contacts/">Contact us</b-nav-item>
                             </b-navbar-nav>
@@ -47,6 +52,16 @@
                     </div>
                 </div>
             </b-navbar>
+            <div class="col-auto nav-caption">
+                <div>
+                    <img src="../assets/images/icons/truck_white.svg" alt="truck icon"/>
+                    Free shipping within UAE.
+                </div>
+                <div>
+                    <img src="../assets/images/icons/return.svg" alt="return icon"/>
+                    Full refund & return.
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -205,6 +220,19 @@
                         }
                     }
                 }
+            }
+        }
+        .nav-caption {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #fff;
+            padding-bottom: 7px;
+            
+            div:nth-child(2) img {margin-left: 10px;}
+            img {
+                margin-right: 10px;
             }
         }
     }

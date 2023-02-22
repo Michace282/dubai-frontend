@@ -1,7 +1,12 @@
 <template>
-    <div class="block-title">
-        <div class="title-shadow">{{ title }}</div>
-        <h1 class="front-title">{{ title }}</h1>
+    <div >
+        <div v-if="!catalog" class="block-title">
+            <div class="title-shadow">{{ title }}</div>
+            <h1 class="front-title">{{ title }}</h1>
+        </div>
+        <div v-else>
+            <h1 class="front-title-without-s">{{ title.toLowerCase() }}</h1>
+        </div>
     </div>
 </template>
 
@@ -14,6 +19,7 @@
                 required: true,
                 default: '',
             },
+            catalog: Boolean,
         },
     };
 </script>
@@ -57,6 +63,16 @@
                 left: 0;
                 // margin: 20px 0;
             }    
+        }
+    }
+    .front-title-without-s {
+        font-family: 'Inter-Medium';
+        color: @black;
+        font-size: 36px;
+        text-transform: capitalize;
+        
+        @media @large {
+            font-size: 24px;
         }
     }
 </style>

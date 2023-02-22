@@ -36,6 +36,18 @@
                     /></b-nav-item>
                 </b-navbar-nav>
             </b-navbar>
+            <div style="overflow: hidden">
+                <div class="col-auto nav-caption">
+                    <div class="nav-shippin">
+                        <img src="../assets/images/icons/truck_white.svg" alt="truck icon" />
+                        Free shipping within UAE.
+                    </div>
+                    <div class="nav-refund">
+                        <img src="../assets/images/icons/return.svg" alt="return icon" />
+                        Full refund & return.
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -156,6 +168,82 @@
                 }
             }
         }
+        .nav-caption {
+        position: relative;
+        left: 0;
+        height: 30px;
+        font-size: 14px;
+        color: #fff;
+        animation: carousel-text 5s linear 0s infinite alternate;
+
+        @media (max-width: 376px) {
+            font-size: 12px;
+        }
+
+        div {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-refund {
+            left: 100vw
+        }
+
+        img {
+            margin-right: 6px;
+        }
+
+    }
+
+    @keyframes carousel-text {
+        0% {
+            left: 0
+        }
+
+        10% {
+            left: 0
+        }
+
+        20% {
+            left: 0
+        }
+
+        30% {
+            left: 0
+        }
+
+        40% {
+            left: 0
+        }
+
+        50% {
+            left: 0
+        }
+
+        60% {
+            left: -100vw
+        }
+
+        70% {
+            left: -100vw
+        }
+
+        80% {
+            left: -100vw
+        }
+
+        90% {
+            left: -100vw
+        }
+
+        100% {
+            left: -100vw
+        }
+    }
     }
 </style>
 <style lang="less" scoped>

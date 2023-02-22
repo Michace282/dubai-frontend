@@ -1,10 +1,10 @@
 <template>
     <div class="container">
         <div class="row caption-group">
-            <div class="col-auto head-caption">
+            <!-- <div class="col-auto head-caption">
                 <img src="~/assets/images/icons/truck.svg" alt="truck icon"/>
                 Free shipping within UAE
-            </div>
+            </div> -->
             <ApolloQuery :query="require('~/graphql/queries/gift/giftNewDetail.graphql')"
                          @result="giftNewDetail">
                 <template v-slot="{ result: { error, data }, isLoading }">
@@ -17,10 +17,6 @@
                     </div>
                 </template>
             </ApolloQuery>
-<!--            <div class="col-auto head-caption">-->
-<!--                <img src="~/assets/images/icons/line.svg"/>-->
-<!--                Size charts-->
-<!--            </div>-->
         </div>
         <h1 class="d-none">Dance Clothes & Shoes Company</h1>
         <ApolloQuery :query="require('~/graphql/queries/stock/stockList.graphql')">
