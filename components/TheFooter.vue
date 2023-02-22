@@ -17,7 +17,7 @@
                             <nuxt-link to="/page/privacy_policy">Privacy Policy</nuxt-link>
                         </li>
                         <li>
-                            <nuxt-link to="/page/terms_condition">Terms & Condition</nuxt-link>
+                            <nuxt-link to="/page/terms_condition">Terms & Conditions</nuxt-link>
                         </li>
                     </ul>
                 </div>

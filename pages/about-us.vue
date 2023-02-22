@@ -9,7 +9,7 @@
             <div class="text mr-60">
                 <p>
                     “DC&S Company” was founded in 2020 and based in Dubai. Our mission – to bring the freshest clothing,
-                    shoes and accessories for all the dance community in the UAE!
+                    shoes and accessories for the UAE dance community!
                 </p>
                 <p>
                     Our team is Kathryn, Oleg and Kateryna. We are professional dancers, competitors and passionate
@@ -25,13 +25,12 @@
                     Oleg and Kateryna have been professional dancers for 17 years and continued their professional
                     career as dance instructors in Dubai training students in Latin, Ballroom and social dances such as
                     Salsa, Bachata and Argentine Tango. They know how difficult it is for dance instructors, students
-                    and lovers of any style of dance to find dance wear which have the right balance of style, comfort,
+                    and lovers of any style of dance to find dancewear which have the right balance of style, comfort,
                     quality, diversity and affordability in the UAE.
                 </p>
                 <p>
-                    We have launched our dance shop to deliver high-quality and stylish dance clothes which will be
-                    comfortable to wear for training and performing in any dance style and at any level or which can be
-                    worn even for parties!
+                    We have launched our dance shop to deliver high-quality and stylish dance clothes which are comfortable 
+                    to wear practice and performing any dance style at any levels. You may even wish to wear them for parties!
                 </p>
             </div>
             <div class="photo d-none d-lg-block">

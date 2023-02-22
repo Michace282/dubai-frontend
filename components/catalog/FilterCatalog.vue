@@ -259,7 +259,7 @@
                                 }
                             },
                             {
-                                key: 'waistcoasts', label: 'Waistcoasts', meta: {
+                                key: 'waistcoasts', label: 'Waistcoats', meta: {
                                     title: 'Waistcoat for men. Waistcoat for dance| DC&S Dubai',
                                     description: 'Classic men\'s waistcoats a perfect chose for special occasions or dance events high quality material and unique design. Available for order online or at our partners stores.',
                                     keywords: 'Waistcoats for men',

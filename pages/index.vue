@@ -33,7 +33,6 @@
                                 <b-carousel
                                     id="carousel-1"
                                     :interval="4000"
-                                    indicators
                                     class="index-carousel"
                                     img-width="1024"
                                     img-height="480"
@@ -74,7 +73,7 @@
         </ApolloQuery>
         <index-page-categories/>
         <div class="advantages-group">
-            <base-title title="Our advantages"/>
+            <base-title title="Why DC&S"/>
             <div class="row mt-45">
                 <div class="col-6 col-sm-4 col-lg advantage" v-for="(advantage, index) in advantages" :key="index">
                     <img :src="require(`~/assets/images/icons/${advantage.icon}`)" alt="icon"/>
@@ -122,7 +121,7 @@
                     },
                     {
                         icon: 'calendar.svg',
-                        name: 'Monthly update of collections',
+                        name: 'Monthly updated collections',
                     },
                     {
                         icon: 'dimond.svg',
@@ -138,7 +137,7 @@
                     },
                     {
                         icon: 'pen.svg',
-                        name: 'We can arrange custom orders according to your measurements',
+                        name: 'Custom order available',
                     },
                 ],
             };
