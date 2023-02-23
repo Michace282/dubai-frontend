@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="contact-group">
-                    <div class="label">Retail shop</div>
+                    <div class="label">Retail shops</div>
                     <div class="value">
                         <p>Al Qouz 1, 6A street, “Palais De Danse” Dance studio, Dubai, UAE</p>
                         <p>Ontario Tower Level P1 unit 2, Business Bay, “Heart of Dance” Dance studio, Dubai, UAE</p>
