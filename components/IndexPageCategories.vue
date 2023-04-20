@@ -35,14 +35,14 @@
                 </nuxt-link>
             </div>
 
-            <div class="col-12 col-md-auto">
+            <!-- <div class="col-12 col-md-auto">
                 <nuxt-link
                     :to="{ path: '/catalog/performance_costumes',  }"
                     class="category horizontal text-left"
                 >
-                    <div class="name">Competetion Consumes</div>
+                    <div class="name">Competetion Costumes</div>
                 </nuxt-link>
-            </div>
+            </div> -->
 
         </div>
         <div class="row categories-pc" v-else>
@@ -86,7 +86,7 @@
             <!-- <div class="col-12 col-md-2">
                 <nuxt-link :to="{ path: '/catalog/performance_costumes',  }" class="category category-performance-costumes">
                     <div class="name">Competetion Consumes</div>
-                    <div class="sub-name">Competetion Consumes</div>
+                    <div class="sub-name">Competetion Costumes</div>
                 </nuxt-link>
             </div> -->
         </div>
