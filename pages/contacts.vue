@@ -11,14 +11,13 @@
                     <div class="label">Telephone</div>
                     <div class="value">
                         <a href="tel:+971585794606">+971 58 579 4606</a>
-                        <!-- <a href="tel:+971585967208">+971 58 596 7208</a> -->
                     </div>
                 </div>
                 <div class="contact-group">
-                    <div class="label">Retail shops</div>
+                    <div class="label">Our Distributor</div>
                     <div class="value">
-                        <p>Al Qouz 1, 6A street, “Palais De Danse” Dance studio, Dubai, UAE</p>
-                        <p>Ontario Tower Level P1 unit 2, Business Bay, “Heart of Dance” Dance studio, Dubai, UAE</p>
+                        <p>"Fred Astair", City Walk, Dubai, Al Raha Street, Building 19, Unit - 19 05</p>
+                        <p>Jabal Ali Industrial First, Plot 1414-0, Dubai, UAE.</p>
                     </div>
                 </div>
                 <div class="contact-group">
