@@ -17,13 +17,13 @@
                     <div class="label">Our Distributor</div>
                     <div class="value">
                         <p>"Fred Astair", City Walk, Dubai, Al Raha Street, Building 19, Unit - 19 05</p>
-                        <p>Jabal Ali Industrial First, Plot 1414-0, Dubai, UAE.</p>
+                        <p>"Heart of Dance", Ontario Tower, level P1, unit 2, Business Bay, Dubai, UAE.</p>
                     </div>
                 </div>
                 <div class="contact-group">
                     <div class="label">Registered office</div>
                     <div class="value">
-                        Um Hurair Second, Wafi Residence, Dubai, UAE
+                        Jabal Ali Industrial First, Plot 1414-0, Dubai, UAE.
                         <div class="d-flex align-items-center mt-30">
                             <a href="https://wa.me/971585794606" target="_blank" class="mr-3"><img
                                 src="~/assets/images/icons/whatsApp-gold.svg" alt="whatsapp icon"/></a>
