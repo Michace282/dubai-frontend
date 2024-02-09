@@ -16,7 +16,7 @@
                 <div class="contact-group">
                     <div class="label">Our Distributor</div>
                     <div class="value">
-                        <p>"Fred Astair", City Walk, Dubai, Al Raha Street, Building 19, Unit - 19 05</p>
+                        <p>City Walk, Dubai, Al Raha Street, Building 19, Unit - 19 05</p>
                         <p>"Heart of Dance", Ontario Tower, level P1, unit 2, Business Bay, Dubai, UAE.</p>
                     </div>
                 </div>
