@@ -1,0 +1,7 @@
+query homeCategories {
+    homeCategories {
+        name
+        image
+        link
+    }
+}

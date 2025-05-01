@@ -6,6 +6,7 @@ query productDetail($id: ID!) {
         mensType
         accessoriesType
         danceShoesType
+        kidsDancewearType
         article
         price
         description
@@ -127,4 +128,12 @@ query productDetail($id: ID!) {
             description
         }
     }
+
+    ProductKidsDancewearType: __type(name: "ProductKidsDancewearType") {
+        enumValues {
+            name
+            description
+        }
+    }
+
 }
