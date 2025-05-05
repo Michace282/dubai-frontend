@@ -10,7 +10,7 @@
                 <div class="contact-group">
                     <div class="label">Telephone</div>
                     <div class="value">
-                        <a href="tel:+971585794606">+971 58 579 4606</a>
+                        <a href="tel:+971567140779">+971 56 714 0779</a>
                     </div>
                 </div>
                 <div class="contact-group">
@@ -18,14 +18,15 @@
                     <div class="value">
                         <p>City Walk, Dubai, Al Raha Street, Building 19, Unit - 19 05</p>
                         <p>"Heart of Dance", Ontario Tower, level P1, unit 2, Business Bay, Dubai, UAE.</p>
+                        <p>"Grand Dance Academy", Al Qouz 3, 4th street, warehouse 2, Dubai, UAE.</p>
                     </div>
                 </div>
                 <div class="contact-group">
                     <div class="label">Registered office</div>
                     <div class="value">
-                        Jabal Ali Industrial First, Plot 1414-0, Dubai, UAE.
+                        Um Hurair Second, WAFI RESIDENCE, Plot number 3-0
                         <div class="d-flex align-items-center mt-30">
-                            <a href="https://wa.me/971585794606" target="_blank" class="mr-3"><img
+                            <a href="https://wa.me/971567140779" target="_blank" class="mr-3"><img
                                 src="~/assets/images/icons/whatsApp-gold.svg" alt="whatsapp icon"/></a>
                             <a href="https://www.instagram.com/dcs_dancewear/" target="_blank" class="ml-1"><img
                                 src="~/assets/images/icons/instagram-gold.svg" alt="instagram icon"/></a>

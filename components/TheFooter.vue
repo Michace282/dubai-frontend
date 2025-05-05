@@ -40,10 +40,10 @@
                             <a href="tel:+971585967208">+971 58 596 7208</a>
                         </li> -->
                         <li>
-                            <a href="tel:+971585794606">+971 58 579 4606</a>
+                            <a href="tel:+971567140779">+971 56 714 0779</a>
                         </li>
                         <li class="text-right">
-                            <a href="https://wa.me/971585794606" target="_blank" class="mr-2"><img
+                            <a href="https://wa.me/971567140779" target="_blank" class="mr-2"><img
                                 src="~/assets/images/icons/whatsApp.svg" alt="whatsapp icon" /></a>
                             <a href="https://www.instagram.com/dcs_dancewear/" target="_blank"><img
                                 src="~/assets/images/icons/instagram.svg" alt="instagram icon" /></a>

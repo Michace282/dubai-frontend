@@ -16,8 +16,10 @@
                         </b-nav-item>
                         <b-nav-item to="/catalog/ladies">Women’s dancewear</b-nav-item>
                         <b-nav-item to="/catalog/mens">Men’s dancewear</b-nav-item>
+                        <b-nav-item to="/catalog/kids_dancewear">Kids dancewear</b-nav-item>
                         <b-nav-item to="/catalog/accessories">Dance Accessories</b-nav-item>
                         <b-nav-item to="/catalog/dance_shoes">Dance shoes</b-nav-item>
+                        <b-nav-item to="/catalog/performance_costumes">Performance Costumes</b-nav-item>
                         <b-nav-item to="/about-us/">About us</b-nav-item>
                         <b-nav-item to="/contacts/">Contact us</b-nav-item>
                     </b-navbar-nav>

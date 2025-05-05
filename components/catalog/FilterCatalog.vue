@@ -21,13 +21,15 @@
                 filter.isNew = null;
                 filter.ladiesType = null;
                 filter.mensType = null;
+                filter.kidsDancewearType = null;
                 filter.accessoriesType = null;
                 filter.danceShoesType = null;
-                filter.kidsDancewearType = null;
+                filter.performanceCostumesType = null;
                 breadcrumbs = [{key:category.key, url:category.url, label:category.label}];
             "
             visible
             isLink
+            :isToggle="category.subCategories.length > 0"
         >
             <div class="category-box">
                 <ul class="categories">
@@ -40,9 +42,10 @@
                         @click="
                             filter.ladiesType = null;
                             filter.mensType = null;
+                            filter.kidsDancewearType = null;
                             filter.accessoriesType = null;
                             filter.danceShoesType = null;
-                            filter.kidsDancewearType = null;
+                            filter.performanceCostumesType = null;
                             filter.productType = category.url;
                             filter.isNew = null;
                             filter[category.filterName] = subCategory.key;
@@ -154,9 +157,10 @@
                     productType: null,
                     ladiesType: null,
                     mensType: null,
+                    kidsDancewearType: null,
                     accessoriesType: null,
                     danceShoesType: null,
-                    kidsDancewearType: null,
+                    performanceCostumesType: null,
                     price_Gte: null,
                     price_Lte: null,
                     orderBy: null
@@ -288,6 +292,60 @@
                         ],
                     },
                     {
+                        key: 'kids_dancewear',
+                        url: 'kids_dancewear',
+                        label: 'Kid\’s dancewear',
+                        filterName: 'kidsDancewearType',
+                        meta: {
+                            title: 'Best kids dance wear! Kids Dance Clothes & Shoes | Dubai',
+                            description: 'Dubai\'s best kids dance clothes! Dance wear kids: shoes, leotards, skirts, jumpsuits, tops. Find the best dance wear for kids here!',
+                            keywords: 'Kids dance clothes. Children\'s dance clothes Dubai. Children\'s dance apparel Dubai. Children\'s Latin dancewear UAE.',
+                            h1: 'kid\'s dancewear',
+                        },
+                        subCategories: [
+                            {
+                                key: 'tops', label: 'Tops', meta: {
+                                    title: 'Kids Dance Tops Dubai | DC&S Dubai',
+                                    description: 'Shop stylish kids dance tops in Dubai – ballroom, jazz & modern styles. Adjustable, one-sleeve & sleevless options. In-store & online at DC&S.',
+                                    keywords: 'kids dance tops Dubai',
+                                    h1: 'Kid\'s Dance Tops',
+                                }
+                            },
+                            {
+                                key: 'bottoms', label: 'Bottoms', meta: {
+                                    title: 'Kids Dance Skirts, Leggings & Trousers | DC&S Dubai',
+                                    description: 'Shop kids\' dance skirts, leggings, and trousers in Dubai. Ballroom, jazz, and modern styles available online & in-store at DC&S.',
+                                    keywords: 'kids dance skirts Dubai, children\'s dance leggings UAE, kids dance trousers Dubai',
+                                    h1: 'Kid\'s Dance Bottoms',
+                                }
+                            },
+                            {
+                                key: 'dresses', label: 'Dresses', meta: {
+                                    title: 'Kids Ballroom & Latin Dance Dresses | DCS Dubai',
+                                    description: 'Shop elegant kids\' ballroom and Latin dance dresses in Dubai. Perfect for competitions and practice. Available online & in-store at DCS.',
+                                    keywords: 'kids dance skirts Dubai, children\'s dance leggings UAE, kids dance trousers Dubai',
+                                    h1: 'Kid\'s Dance Dresses',
+                                }
+                            },
+                            {
+                                key: 'jumpsuits', label: 'Jumpsuits', meta: {
+                                    title: 'Kids Latin & Modern Dance Jumpsuits | DC&S Dubai',
+                                    description: 'Shop stylish kids’ dance jumpsuits in Dubai – perfect for Latin and modern styles. Comfortable & performance-ready. Available online & in-store at DC&S.',
+                                    keywords: 'Kids dance jumpsuits Dubai. Children\'s Latin dance jumpsuits UAE. Kids Latin dance costumes Dubai',
+                                    h1: 'Kid\'s Dance Jumpsuits',
+                                }
+                            },
+                            {
+                                key: 'dance_shoes', label: 'Dance Shoes', meta: {
+                                    title: 'Kids\' Ballroom & Latin Dance Shoes | DC&S Dubai',
+                                    description: 'Shop kids\' ballroom and Latin dance shoes in Dubai. Elegant, comfortable, and performance-ready options available online & in-store at DC&S',
+                                    keywords: 'Kids ballroom dance shoes Dubai. Children\'s Latin dance shoes UAE. Girls Latin dance shoes Dubai. Boys ballroom dance shoes UAE',
+                                    h1: 'Dance Shoes',
+                                }
+                            },
+                        ],
+                    },
+                    {
                         key: 'accessories',
                         url: 'accessories',
                         label: 'Accessories',
@@ -361,63 +419,9 @@
                             title: 'Dance costumes and competition dresses for Latin, Ballroom and Salsa in Dubai.',
                             description: 'Our website collected a wide collection of Latin and Ballroom competition dance outfits, beautiful attires for male and female for sale and renting.',
                             keywords: "Competition dance costumes Dubai. Ballroom and Latin dance dresses Dubai.",
-                            h1: "PERFORMANCE CONSUMES"
+                            h1: "Performance costumes"
                         },
                         subCategories: [
-                            
-                        ],
-                    },
-                    {
-                        key: 'kids_dancewear',
-                        url: 'kids_dancewear',
-                        label: 'Kid\’s dancewear',
-                        filterName: 'kidsDancewearType',
-                        meta: {
-                            title: 'Kid\'s dancewear. Ballroom dance costume for male| DC&S Dubai',
-                            description: 'We have a massive collection of dancewear for kids. Dance pants, ballroom shirts, T-shirts, turtlenecks, long sleeves, shoes. All sizes are available.',
-                            keywords: 'Kids dancewear. Male ballroom dance costumes.',
-                            h1: 'KID\'S DANCEWEAR',
-                        },
-                         subCategories: [
-                            {
-                                key: 'tops', label: 'Tops', meta: {
-                                    title: 'Dancewear tops, bra tops. Dancing crop top| DC&S Dubai',
-                                    description: 'Beautiful kid\'s tops and bra tops for dancing or other activities at many different colors and designs available for order online or at our sale representor\'s stores.',
-                                    keywords: 'Dancewear tops. Dancing crop tops.',
-                                    h1: 'KID’S DANCE TOPS',
-                                }
-                            },
-                            {
-                                key: 'bottoms', label: 'Bottoms', meta: {
-                                    title: 'Dancewear bottoms, bra bottoms. Dancing crop bottom| DC&S Dubai',
-                                    description: 'Beautiful kid\'s tops and bra tops for dancing or other activities at many different colors and designs available for order online or at our sale representor\'s stores.',
-                                    keywords: 'Dancewear bottoms. Dancing crop bottoms.',
-                                    h1: 'KID’S DANCE BOTTOMS',
-                                }
-                            },
-                            {
-                                key: 'dresses', label: 'Dresses', meta: {
-                                    title: 'Dacewear dresses. Latin, Salsa & Ballroom dancing dresses| DC&S Dubai',
-                                    description: 'Unique dresses for Ballroom, Latin, Salsa dances. Extensive assortment - dresses with fringe, classic ballroom or exotic dance dresses.',
-                                    keywords: 'Dancewear dresses. Dancing dresses. Dresses for dancers.',
-                                    h1: 'KID’S DANCE DRESSES',
-                                }
-                            },
-                            {
-                                key: 'jumpsuits', label: 'Jumpsuits', meta: {
-                                    title: 'Dancing jumpsuits. Best jumpsuits for dance| DC&S Dubai',
-                                    description: 'Perfect jumpsuits for dance lovers, super comfortable designs and high quality materials make you feel and look amazing in our jumpsuits. Available for order online and at our partners stores.',
-                                    keywords: 'Jumpsuit for dancing. Jumpsuit dance costume.',
-                                    h1: 'KID’S DANCE JUMPSUITS',
-                                }
-                            },
-                            {
-                                key: 'dance_shoes', label: 'Dance shoes',
-                                title: 'Dance shoes in Dubai. Salsa, Latin, Ballroom dancing shoes',
-                                description: 'In our DCS dancewear shop we are happy to offer you kid\'s dance shoes for Salsa, Bachata, Latin, Argentine tango and Ballroom dances.',
-                                keywords: "Dance shoes in Dubai, Ballroom dancing shoes, Salsa dancing shoes",
-                                h1: "KID’S DANCE SHOES",
-                            },
                             
                         ],
                     },
@@ -449,6 +453,7 @@
                         accessoriesType: this.$route.params.product == 'accessories' ? this.$route.params.type : null,
                         danceShoesType: this.$route.params.product == 'dance_shoes' ? this.$route.params.type : null,
                         kidsDancewearType : this.$route.params.product == 'kids_dancewear' ? this.$route.params.type : null,
+                        performanceCostumesType : this.$route.params.product == 'performance_costumes' ? this.$route.params.type : null,
                         price_Gte: null,
                         price_Lte: null,
                     };
@@ -592,7 +597,8 @@
                     mensType: null,
                     accessoriesType: null,
                     danceShoesType: null,
-                    kidsDancewearType:  null,
+                    kidsDancewearType: null,
+                    performanceCostumesType: null,
                     price_Gte: null,
                     price_Lte: null,
                 };

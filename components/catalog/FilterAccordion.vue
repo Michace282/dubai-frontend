@@ -6,7 +6,7 @@
             </h2>
             <h2 block v-b-toggle="name" v-else class="btn-block category-name">{{ title }}</h2>
             <!-- <b-button block v-b-toggle="name">{{ title }}</b-button> -->
-            <b-button block v-b-toggle="name" class="btn-toggler"></b-button>
+            <b-button v-if="isToggle" block v-b-toggle="name" class="btn-toggler"></b-button>
         </b-card-header>
         <b-collapse :id="name" :accordion="name" role="tabpanel" :visible="visible">
             <b-card-body>
@@ -38,6 +38,11 @@
                 type: Boolean,
                 required: false,
                 default: false,
+            },
+            isToggle: {
+                type: Boolean,
+                required: false,
+                default: true,
             },
         },
     };

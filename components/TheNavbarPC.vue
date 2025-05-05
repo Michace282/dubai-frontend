@@ -36,15 +36,18 @@
                                 <b-nav-item to="/catalog?isNew=true">New Collection <img class="star"
                                                                                                    src="../assets/images/icons/star.png" alt="star"/>
                                 </b-nav-item>
-                                <b-nav-item to="/catalog/ladies">Women’s dancewear</b-nav-item>
+                                <!-- <b-nav-item to="/catalog/ladies">Women’s dancewear</b-nav-item>
                                 <b-nav-item to="/catalog/mens">Men’s dancewear</b-nav-item>
+                                <b-nav-item to="/catalog/kids">Kid's dancewear</b-nav-item>
                                 <b-nav-item to="/catalog/accessories">Dance Accessories</b-nav-item>
                                 <b-nav-item to="/catalog/dance_shoes">Dance shoes</b-nav-item>
-                                <!-- <b-nav-item to="/catalog/ladies">Women</b-nav-item>
+                                <b-nav-item to="/catalog/performance_costumes">Performance Costumes</b-nav-item> -->
+                                <b-nav-item to="/catalog/ladies">Women</b-nav-item>
                                 <b-nav-item to="/catalog/mens">Men</b-nav-item>
+                                <b-nav-item to="/catalog/kids_dancewear">Kids</b-nav-item>
                                 <b-nav-item to="/catalog/accessories">Accessories</b-nav-item>
                                 <b-nav-item to="/catalog/dance_shoes">Shoes</b-nav-item>
-                                <b-nav-item to="/catalog/performance_costumes">Costumes</b-nav-item> -->
+                                <b-nav-item to="/catalog/performance_costumes">Costumes</b-nav-item>
                                 <b-nav-item to="/about-us/">About us</b-nav-item>
                                 <b-nav-item to="/contacts/">Contact us</b-nav-item>
                             </b-navbar-nav>

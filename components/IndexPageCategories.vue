@@ -1,39 +1,39 @@
 <template>
     <div class="mt-45">
-        <div class="row categories-mob" v-if="$device.isMobile">
-           <ApolloQuery
-           :query="require('~/graphql/queries/homeCategoriesSection/homeCategories.graphql')"
-           >
+        <!-- <div class="row categories-mob" v-if="$device.isMobile">
+            <ApolloQuery
+                :query="require('~/graphql/queries/homeCategoriesSection/homeCategories.graphql')"
+            >
+                <template v-slot="{ result: { error, data }, isLoading }">
+                    <div v-if="isLoading">Loading...</div>
+                    <div v-else-if="error">Error loading categories</div>
+                    <div v-else-if="data && data.homeCategories" class="row">
+                        <div
+                            v-for="category in data.homeCategories"
+                            :key="category.name"
+                            class="col-12 col-md-auto"
+                        >
+                            <nuxt-link
+                                :to="category.link"
+                                class="category vertical-large mt-0"
+                                :class="category.styleClass"
+                            >
+                                <div style="overflow: hidden; height: 150px;">
+                                    <img
+                                        :src="category.image"
+                                        :alt="category.name"
+                                        class="my-index-category-img"
+                                    />
+                                </div>
+                                <div class="name">{{ category.name }}</div>
+                            </nuxt-link>
+                        </div>
+                    </div>
+                    <div v-else class="col-12">No categories available</div>
+                </template>
+            </ApolloQuery>
 
-           <template v-slot="{ result: { error, data }, isLoading }">
-            <div v-if="isLoading" class="col-12">Loading...</div>
-            <div v-else-if="error" class="col-12 text-danger">
-                Error: {{ error.message }}
-            </div>
-            <div v-else-if="data && data.homeCategories" class="row">
-                <div
-                v-for="category in data.homeCategories"
-                :key="category.name"
-                class="col-12 col-md-auto"
-                >
-                <nuxt-link
-                :to="category.link"
-                class="category vertical-large mt-0"
-                >
-                <div style="overflow: hidden; height: 150px;">
-                    <img
-                    :src="category.image"
-                    :alt="category.name"
-                    class="my-index-category-img"
-                    >
-                </div>
-                <div class="name">{{ category.name }}</div>
-            </nuxt-link>
-        </div>
-    </div>
-    <div v-else class="col-12">No categories available</div>
-</ApolloQuery>
-            <!--<div class="col-12 col-md-auto">
+            <div class="col-12 col-md-auto">
                 <nuxt-link
                     :to="{ path: '/catalog/ladies',  }"
                     class="category vertical-large mt-0"
@@ -65,51 +65,65 @@
                     <div class="name">ACCESSORIES</div>
                     <div style="overflow: hidden; height: 150px"><img src='../assets/images/category-acessories1.png' alt="Women’s dance clothes" class="my-index-category-img"></div>
                 </nuxt-link>
-            </div>-->
-
-            <!-- <div class="col-12 col-md-auto">
+            </div> 
+            
+            <div class="col-12 col-md-auto">
                 <nuxt-link
                     :to="{ path: '/catalog/performance_costumes',  }"
                     class="category horizontal text-left"
                 >
                     <div class="name">Competetion Costumes</div>
                 </nuxt-link>
-            </div> -->
+            </div> 
 
-        </div>
-        <div class="row categories-pc" v-else>
-          <ApolloQuery
-          :query="require('~/graphql/queries/homeCategoriesSection/homeCategories.graphql')"
-          >
-          <template v-slot="{ result: { error, data }, isLoading }">
-            <div v-if="isLoading" class="col-12">Loading...</div>
-            <div v-else-if="error" class="col-12 text-danger">
-                Error: {{ error.message }}
-            </div>
-            <div v-else-if="data && data.homeCategories" class="row">
-                <div
-                v-for="category in data.homeCategories"
-                :key="category.name"
-                class="col-12 col-md-3"
-                >
-                <nuxt-link
-                :to="category.link"
-                class="category category-img-ladies"
-                >
-                <img
-                :src="category.image"
-                :alt="category.name"
-                class="my-index-category-img"
-                >
-                <div class="name">{{ category.name }}</div>
-                <div class="sub-name">{{ category.name }}</div>
-            </nuxt-link>
-        </div>
-    </div>
-    <div v-else class="col-12">No categories available</div>
-</template>
-</ApolloQuery>
-            <!--<div class="col-12 col-md-3">
+        </div> -->
+        <!-- <div class="row categories-pc" v-else> -->
+        <div class="categories-pc">
+            <ApolloQuery
+                :query="require('~/graphql/queries/homeCategoriesSection/homeCategories.graphql')"
+            >
+                <template v-slot="{ result: { error, data }, isLoading }">
+                    <div v-if="isLoading">Loading...</div>
+                    <div v-else-if="error">Error loading categories</div>
+                    <div v-else-if="data && data.homeCategories" class="w-full px-2">
+                        <VueSlickCarousel v-bind="settings">
+                            <div
+                                v-for="category in data.homeCategories"
+                                :key="category.name"
+                                class="p-2"
+                            >
+                                <nuxt-link
+                                    :to="category.link"
+                                    class="category"
+                                    :class="category.styleClass"
+                                >
+                                    <div>
+                                        <img
+                                            :src="category.image"
+                                            :alt="category.name"
+                                            class="my-index-category-img"
+                                        />
+                                    </div>
+                                    <div class="name">{{ category.name }}</div>
+                                    <div class="sub-name">{{ category.name }}</div>
+                                </nuxt-link>
+                            </div>
+                            <template v-slot:prevArrow>
+                                <button class="custom-arrow custom-prev">
+                                    <img src="~/assets/images/icons/arrow-carousel.svg" alt="left icon" />
+                                </button>
+                            </template>
+                            <template v-slot:nextArrow>
+                                <button class="custom-arrow custom-next">
+                                    <img src="~/assets/images/icons/arrow-carousel.svg" alt="right icon" />
+                                </button>
+                            </template>
+                        </VueSlickCarousel>
+                    </div>
+                </template>
+            </ApolloQuery>
+
+            <!-- <div class="col-12 col-md-3">
                 <nuxt-link
                     :to="{ path: '/catalog/ladies',  }"
                     class="category category-img-ladies"
@@ -145,7 +159,7 @@
                     <div class="name">MEN</div>
                     <div class="sub-name">MEN</div>
                 </nuxt-link>
-            </div>-->
+            </div> -->
             <!-- <div class="col-12 col-md-2">
                 <nuxt-link :to="{ path: '/catalog/performance_costumes',  }" class="category category-performance-costumes">
                     <div class="name">Competetion Consumes</div>
@@ -155,32 +169,79 @@
         </div>
     </div>
 </template>
+
 <script>
+    import VueSlickCarousel, { f } from 'vue-slick-carousel'
+    import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+    // optional style for arrows & dots
+    import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
     export default {
         name: 'IndexPageCategories',
+        components: { VueSlickCarousel },
+        data() {
+            return {
+                settings: {
+                    dots: true,
+                    arrows: true,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    speed: 500,
+                    slidesToShow: 4,
+                    swipeToSlide: true,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                            }
+                        },
+                        {
+                            breakpoint: 770,
+                            settings: {
+                                slidesToShow: 2,
+                                arrows: false,
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                centerMode: true,
+                                arrows: false,
+                            }
+                        }
+                    ]
+                }
+            };
+        }
     };
 </script>
 <style>
- .category-performance-costumes {
-     WIDTH: 100%;
-     HEIGHT: 100%;
- }
- .category-performance-costumes .name {
+   .category-performance-costumes {
+       WIDTH: 100%;
+       HEIGHT: 100%;
+   }
+   .category-performance-costumes .name {
     -webkit-transform: rotate(-90deg) translate(-100px, -100px);
     -moz-transform: rotate(-90deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     white-space: nowrap;
     font-size: 20px!important;
-}
+   }
 </style>
 <style lang="less" scoped>
     .categories-pc {
-        justify-content: center;
+        // justify-content: center;
 
-        .col-md-3 {
-            padding: 0 5px;
+        // .col-md-3 {
+        //     padding: 0 5px;
+        // }
+
+        .custom-next {
+            transform: rotate(180deg);
         }
-
         .category {
             position: relative;
             display: block;
@@ -241,216 +302,217 @@
         }
 
         // .category-img-mens {
-            //     background-image: url('../assets/images/category-mans-pc.png');
-            // }
+        //     background-image: url('../assets/images/category-mans-pc.png');
+        // }
 
-            // .category-img-danceshoes {
-                //     background-image: url('../assets/images/category-danceshoe-pc.png');
-                // }
+        // .category-img-danceshoes {
+        //     background-image: url('../assets/images/category-danceshoe-pc.png');
+        // }
 
-                // .category-img-acessories {
-                    //     background-image: url('../assets/images/category-acessories-pc.png');
-                    // }
+        // .category-img-acessories {
+        //     background-image: url('../assets/images/category-acessories-pc.png');
+        // }
 
-                    // .category-img-ladies {
-                        //     background-image: url('../assets/images/category-ladies-pc.png');
-                        // }
-                    }
+        // .category-img-ladies {
+        //     background-image: url('../assets/images/category-ladies-pc.png');
+        // }
+    }
 
-                    .categories-mob {
-                        justify-content: center;
+    // .categories-mob {
+    //     justify-content: center;
 
-                        .category {
-                            position: relative;
-                            display: block;
-                            background: #f3f0ef;
-                            text-decoration: none !important;
-                            background-repeat: no-repeat;
-                            background-size: cover;
+    //     .category {
+    //         position: relative;
+    //         display: block;
+    //         background: #f3f0ef;
+    //         text-decoration: none !important;
+    //         background-repeat: no-repeat;
+    //         background-size: cover;
 
-                            @media @medium {
-                                margin: 30px auto 0px;
-                            }
+    //         @media @medium {
+    //             margin: 30px auto 0px;
+    //         }
+            
+    //         .my-index-category-img {
+    //             object-fit: fill;
+    //             // width: 100%;
+    //             height: 100%;
+    //         }
 
-                            .my-index-category-img {
-                                object-fit: cover;
-                                width: 100%;
-                            }
+    //         .name {
+    //             font-family: 'Inter-Medium';
+    //             font-size: 24px;
+    //             line-height: 29px;
+    //             text-transform: uppercase;
+    //             color: @black;
+    //             z-index: 10;
 
-                            .name {
-                                font-family: 'Inter-Medium';
-                                font-size: 24px;
-                                line-height: 29px;
-                                text-transform: uppercase;
-                                color: @black;
-                                z-index: 10;
+    //             @media @extraLarge {
+    //                 font-size: 18px;
+    //             }
 
-                                @media @extraLarge {
-                                    font-size: 18px;
-                                }
+    //             &:after {
+    //                 position: absolute;
+    //                 z-index: -1;
+    //                 text-transform: uppercase;
+    //                 font-size: 48px;
+    //                 color: @grey2;
 
-                                &:after {
-                                    position: absolute;
-                                    z-index: -1;
-                                    text-transform: uppercase;
-                                    font-size: 48px;
-                                    color: @grey2;
+    //                 @media @extraLarge {
+    //                     font-size: 28px;
+    //                 }
+    //             }
+    //         }
 
-                                    @media @extraLarge {
-                                        font-size: 28px;
-                                    }
-                                }
-                            }
+    //         &.vertical {
+    //             width: 255px;
+    //             height: 530px;
+    //             // background-image: url('../assets/images/category-mans.png');
 
-                            &.vertical {
-                                width: 255px;
-                                height: 530px;
-                                // background-image: url('../assets/images/category-mans.png');
+    //             @media @extraLarge {
+    //                 width: 150px;
+    //                 height: 330px;
+    //             }
 
-                                @media @extraLarge {
-                                    width: 150px;
-                                    height: 330px;
-                                }
+    //             @media @medium {
+    //                 width: 100%;
+    //                 height: 150px;
+    //                 background-size: 272px;
+    //                 background-position: 74px -10px;
+    //             }
 
-                                @media @medium {
-                                    width: 100%;
-                                    height: 150px;
-                                    background-size: 272px;
-                                    background-position: 74px -10px;
-                                }
+    //             .name {
+    //                 position: absolute;
+    //                 top: 111px;
+    //                 left: 40px;
 
-                                .name {
-                                    position: absolute;
-                                    top: 111px;
-                                    left: 40px;
+    //                 @media @extraLarge {
+    //                     top: 64px;
+    //                     left: 20px;
+    //                 }
 
-                                    @media @extraLarge {
-                                        top: 64px;
-                                        left: 20px;
-                                    }
+    //                 &:after {
+    //                     content: 'Mens';
+    //                     top: -17px;
+    //                     left: -30px;
 
-                                    &:after {
-                                        content: 'Mens';
-                                        top: -17px;
-                                        left: -30px;
+    //                     @media @extraLarge {
+    //                         top: -9px;
+    //                         left: -15px;
+    //                     }
+    //                 }
+    //             }
+    //         }
 
-                                        @media @extraLarge {
-                                            top: -9px;
-                                            left: -15px;
-                                        }
-                                    }
-                                }
-                            }
+    //         &.horizontal {
+    //             display: flex;
+    //             align-items: center;
+    //             width: 445px;
+    //             height: 250px;
+    //             overflow: hidden;
 
-                            &.horizontal {
-                                display: flex;
-                                align-items: center;
-                                width: 445px;
-                                height: 250px;
-                                overflow: hidden;
+    //             @media @extraLarge {
+    //                 width: 270px;
+    //                 height: 150px;
+    //             }
 
-                                @media @extraLarge {
-                                    width: 270px;
-                                    height: 150px;
-                                }
+    //             @media @medium {
+    //                 width: 100%;
+    //                 height: 150px;
+    //                 // background-size: 270px;
+    //             }
 
-                                @media @medium {
-                                    width: 100%;
-                                    height: 150px;
-                                    // background-size: 270px;
-                                }
+    //             &.text-left {
+    //                 // background-image: url('../assets/images/category-acessories.png');
 
-                                &.text-left {
-                                    // background-image: url('../assets/images/category-acessories.png');
+    //                 .name {
+    //                     position: relative;
+    //                     margin-left: 40px;
 
-                                    .name {
-                                        position: relative;
-                                        margin-left: 40px;
+    //                     @media @extraLarge {
+    //                         margin-left: 20px;
+    //                     }
 
-                                        @media @extraLarge {
-                                            margin-left: 20px;
-                                        }
+    //                     &:after {
+    //                         content: 'Accessories';
+    //                         left: -32px;
+    //                         top: -15px;
 
-                                        &:after {
-                                            content: 'Accessories';
-                                            left: -32px;
-                                            top: -15px;
+    //                         @media @extraLarge {
+    //                             left: -16px;
+    //                             top: -7px;
+    //                         }
+    //                     }
+    //                 }
+    //             }
 
-                                            @media @extraLarge {
-                                                left: -16px;
-                                                top: -7px;
-                                            }
-                                        }
-                                    }
-                                }
+    //             &.text-right {
+    //                 // background-image: url('../assets/images/category-danceshoes.png');
+    //                 justify-content: flex-end;
+    //                 margin-top: 30px;
 
-                                &.text-right {
-                                    // background-image: url('../assets/images/category-danceshoes.png');
-                                    justify-content: flex-end;
-                                    margin-top: 30px;
+    //                 .name {
+    //                     position: relative;
+    //                     margin-right: 60px;
 
-                                    .name {
-                                        position: relative;
-                                        margin-right: 60px;
+    //                     @media @extraLarge {
+    //                         margin-right: 17px;
+    //                     }
 
-                                        @media @extraLarge {
-                                            margin-right: 17px;
-                                        }
+    //                     &:after {
+    //                         content: 'Danceshoes';
+    //                         left: -32px;
+    //                         top: -15px;
 
-                                        &:after {
-                                            content: 'Danceshoes';
-                                            left: -32px;
-                                            top: -15px;
+    //                         @media @extraLarge {
+    //                             left: -15px;
+    //                             top: -7px;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
 
-                                            @media @extraLarge {
-                                                left: -15px;
-                                                top: -7px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+    //         &.vertical-large {
+    //             width: 350px;
+    //             height: 530px;
 
-                            &.vertical-large {
-                                width: 350px;
-                                height: 530px;
+    //             // background-image: url('../assets/images/category-ladies.png');
 
-                                // background-image: url('../assets/images/category-ladies.png');
+    //             @media @extraLarge {
+    //                 width: 210px;
+    //                 height: 330px;
+    //             }
 
-                                @media @extraLarge {
-                                    width: 210px;
-                                    height: 330px;
-                                }
+    //             @media @medium {
+    //                 width: 100%;
+    //                 height: 150px;
+    //                 // background-size: 160px;
+    //                 background-position: 20px 0px;
+    //             }
 
-                                @media @medium {
-                                    width: 100%;
-                                    height: 150px;
-                                    // background-size: 160px;
-                                    background-position: 20px 0px;
-                                }
+    //             .name {
+    //                 position: absolute;
+    //                 bottom: 110px;
+    //                 right: 60px;
 
-                                .name {
-                                    position: absolute;
-                                    bottom: 110px;
-                                    right: 60px;
+    //                 @media @extraLarge {
+    //                     bottom: 68px;
+    //                     right: 26px;
+    //                 }
 
-                                    @media @extraLarge {
-                                        bottom: 68px;
-                                        right: 26px;
-                                    }
+    //                 &:after {
+    //                     content: 'Ladies';
+    //                     left: -37px;
+    //                     top: -15px;
 
-                                    &:after {
-                                        content: 'Ladies';
-                                        left: -37px;
-                                        top: -15px;
-
-                                        @media @extraLarge {
-                                            left: -15px;
-                                            top: -9px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                </style>
+    //                     @media @extraLarge {
+    //                         left: -15px;
+    //                         top: -9px;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+</style>
